@@ -1,10 +1,48 @@
 import React from "react";
-
+import Hero from "@components/Hero/Hero";
+import { EachProduct } from "@components/EachProduct";
+import HeroInfo from "@components/Hero/HeroInfo";
+import CategoryScroll from "@components/CategoryScroll/CategoryScroll";
+import HomeBanner from "@components/Banners/HomeBanner";
+import Heading from "@components/Heading/Heading";
 
 const Home: React.FC = () => {
     return (
         <div>
-            <h1>Home Page</h1>
+            <Hero />
+            <HeroInfo />
+            <section className="container-fluid section">
+                <Heading heading="New Arrivals" />
+                <div className="grid-products grid--view-items shop-grid-5 prd-grid">
+                    <div className="row">
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                    </div>
+                </div>
+            </section>
+            <CategoryScroll />
+            <section className="container-fluid section">
+                <Heading heading="Popular Items" />
+                <div className="grid-products grid--view-items shop-grid-5 prd-grid">
+                    <div className="row">
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                        <EachProduct />
+                    </div>
+                </div>
+            </section>
+            <HomeBanner />
         </div>
     );
 };

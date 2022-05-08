@@ -11,7 +11,13 @@ class CustomDocument extends Document {
             ctx.renderPage = () =>
                 originalRenderPage({
                     enhanceApp: (App) => (props) =>
-                        sheet.collectStyles(<App {...props} />),
+                        sheet.collectStyles(
+                            <body className="template-index index-demo4">
+                                <div className="page-wrapper">
+                                    <App {...props} />
+                                </div>
+                            </body>,
+                        ),
                 });
             const initialProps = await Document.getInitialProps(ctx);
             return {
