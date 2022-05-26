@@ -34,7 +34,7 @@ export default function PageNotFound({}: Props) {
                                 <h1>404 - PAGE NOT FOUND</h1>
                             </div>
                             <p>
-                                We can't seem to find page you are looking for.
+                                We cant seem to find page you are looking for.
                             </p>
                             <p>
                                 <a
