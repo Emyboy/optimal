@@ -1,6 +1,6 @@
-# Boilerplate - NextJs + Typescript + Jest + Testing Library setup
+# OPTIMAL - E-commerce solution built with NextJS and Redux
 
-If you want to start a project using the basic setup, this is the right repository for you. Please feel free to share and contribute.
+Welcome to my personal project called Optimal
 
 --
 

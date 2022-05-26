@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Header />
       <div id="page-content">
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </div>
       <Footer />
     </>
