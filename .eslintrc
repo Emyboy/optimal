@@ -1,0 +1,10 @@
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    // Other rules
+    "@next/next/no-img-element": "off"
+  }
+}
