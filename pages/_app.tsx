@@ -1,39 +1,20 @@
-import React from "react";
-import { AppProps } from "next/app";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledThemeProvider } from "@definitions/styled-components";
-import { initializeApollo } from "@services/graphql";
-import { ApolloProvider } from "@apollo/client";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Hydrate } from "react-query/hydration";
-import { Provider } from "react-redux";
-import store from "@redux/store";
 import "@assets/css/plugins.css";
 import "@assets/css/style.css";
 import "@assets/css/responsive.css";
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 import Header from "@components/Layout/Header/Header";
 import Footer from "@components/Layout/Footer/Footer";
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-    const apolloClient = initializeApollo();
-    const queryClient = new QueryClient();
-    return (
-        <StyledThemeProvider>
-            <ApolloProvider client={apolloClient}>
-                <QueryClientProvider client={queryClient}>
-                    <Hydrate state={pageProps.dehydratedState}>
-                        <Provider store={store}>
-                            <Header />
-                            <div id="page-content">
-                                <Component {...pageProps} />
-                            </div>
-                            <Footer />
-                        </Provider>
-                    </Hydrate>
-                </QueryClientProvider>
-            </ApolloProvider>
-        </StyledThemeProvider>
-    );
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Header />
+      <div id="page-content">
+        <Component {...pageProps} />;
+      </div>
+      <Footer />
+    </>
+  );
 }
-
 export default MyApp;
