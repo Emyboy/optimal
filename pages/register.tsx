@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import RegisterForm from "@components/Auth/RegisterForm";
+import { User } from "interfaces/auth.interface";
 
 type Props = {};
 
 export default function register({}: Props) {
+  
+
     return (
         <div>
             <div className="collection-header">
@@ -27,79 +31,13 @@ export default function register({}: Props) {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mb-md-0">
                             <div className="inner">
-                                <form
-                                    method="post"
-                                    action="#"
-                                    className="customer-form"
-                                >
-                                    <h3 className="h4 text-uppercase">
-                                        REGISTERED CUSTOMERS
-                                    </h3>
-                                    <p>
-                                        If you have an account with us, please
-                                        log in.
-                                    </p>
-                                    <div className="row">
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div className="form-group">
-                                                <label
-                                                    htmlFor="CustomerEmail"
-                                                    className="d-none"
-                                                >
-                                                    Email{" "}
-                                                    <span className="required">
-                                                        *
-                                                    </span>
-                                                </label>
-                                                <input
-                                                    type="email"
-                                                    name="customer[email]"
-                                                    placeholder="Email"
-                                                    id="CustomerEmail"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div className="form-group">
-                                                <label
-                                                    htmlFor="CustomerPassword"
-                                                    className="d-none"
-                                                >
-                                                    Password{" "}
-                                                    <span className="required">
-                                                        *
-                                                    </span>
-                                                </label>
-                                                <input
-                                                    type="password"
-                                                    name="customer[password]"
-                                                    placeholder="Password"
-                                                    id="CustomerPassword"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="text-left col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <p className="d-flex-center">
-                                                <input
-                                                    type="submit"
-                                                    className="btn rounded me-auto"
-                                                    value="Sign In"
-                                                />
-                                                <a href="forgot-password.html">
-                                                    Forgot your password?
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </form>
+                                <RegisterForm done={(e) => {}} />
                             </div>
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                             <div className="inner">
                                 <h3 className="h4 text-uppercase">
-                                    NEW CUSTOMER?
+                                    OLD CUSTOMER?
                                 </h3>
                                 <p>
                                     Registering for this site allows you to
@@ -110,9 +48,7 @@ export default function register({}: Props) {
                                     faster and easier
                                 </p>
                                 <Link href={`/register`}>
-                                    <a className="btn rounded">
-                                        Create an account
-                                    </a>
+                                    <a className="btn rounded">Login Here</a>
                                 </Link>
                             </div>
                         </div>

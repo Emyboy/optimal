@@ -1,4 +1,4 @@
-# OPTIMAL - E-commerce solution built with NextJS and Redux
+# OPTIMAL - E-commerce solution built with NextJS, Redux and Typescript
 
 Welcome to my personal project called Optimal
 
@@ -16,9 +16,9 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Basic NextJS files and directories structure (suggestion)
+### Files and directories structure
 
-```
+```bash
 /app
   \_ /.next/
   \_ /components/
@@ -26,9 +26,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
           \_ button.spec.tsx
           \_ button.styles.tsx
           \_ index.tsx
+        \_ other components...
   \_ /pages/
       \_ _api
       \_ _app.tsx
+      \_ cart.tsx
+      \_ checkout.tsx
+      \_ login.tsx
+      \_ register.tsx
+      \_ about.tsx
       \_ index.jsx
   \_ /public/
       \_ favicon.ico
@@ -61,6 +67,33 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Features & Points
+- Online payments
+- Accessibility
+- SEO - Search Engine Optimization
+- Authentication and Authorization
+- Form Validation
+- Search Filtering
+- Pagination
+
+## Technologies
+- React
+- [Next.js](https://nextjs.org/docs)
+- GraphQL
+- React Bootstrap
+- Redux
+- Jest & Testing Library
+- [Cypress](https://www.cypress.io/)
+- [Paystack](https://paystack.com/)
+
+## API Documentation
+- [Local API Documentation](http://localhost:1337/documentation)  - localhost:1337/documentation
+- [Prod API Documentation](http://localhost:1337/documentation) - localhost:1337/documentation
+
+## GraphQL Endpoint
+- [Local GraphQL Endpoint](http://localhost:1337/graphql) - localhost:1337/graphql
+- [Prod GraphQL Endpoint](http://localhost:1337/graphql) - localhost:1337/graphql
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -75,7 +108,7 @@ And the amazing tutorials I found and helped me built this boilerplate:
 - [How To Quickly Add Jest To Your Next.js App](https://dev.to/ashconnolly/how-to-quickly-add-jest-to-your-next-js-app-1h32)
 - [Setting Up Testing Library with NextJS](https://frontend-digest.com/setting-up-testing-library-with-nextjs-a9702cbde32d)
 
-## Deploy on Vercel
+## Deployed on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 

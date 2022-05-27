@@ -219,7 +219,7 @@ export default function Footer({}: Props) {
       <div className="footer-bottom clearfix">
         <div className="container">
           <div className="d-flex-center flex-column justify-content-md-between flex-md-row-reverse">
-            <img src="assets/images/payment.png" alt="Paypal Visa Payments" />
+            <img src="/assets/images/payment.png" alt="Paypal Visa Payments" />
             <div className="copytext text-uppercase">
               © {new Date().getFullYear()} Optimal. All Rights Reserved.
             </div>
