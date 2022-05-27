@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["public/assets/*"],
+      "@redux/*": ["redux/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"]
@@ -21,6 +22,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "test/test-utils.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "test/test-utils.js", "pages/_app.jsx"],
   "exclude": ["node_modules"]
 }
