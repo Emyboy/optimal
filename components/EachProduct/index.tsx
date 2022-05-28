@@ -46,7 +46,7 @@ export function EachProduct({ size, data }: Props) {
                 </div>
                 <div className="product-price">
                     <span className="old-price">$199.00</span>
-                    <span className="price">$219.00</span>
+                    <span className="price">${attributes.price}</span>
                 </div>
                 <ul className="swatches">
                     <li className="swatch medium radius black">

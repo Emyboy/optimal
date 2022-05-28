@@ -2,11 +2,14 @@ import { EachProduct } from "@components/EachProduct";
 import ProductCardForm from "@components/ProductDetails/ProductCardForm";
 import WhyUs from "@components/WhyUs";
 import axios from "axios";
+import { Product } from "interfaces/product.interface";
 import { GetServerSideProps } from "next";
 import { AppContext } from "next/app";
 import React from "react";
 
-type Props = {};
+type Props = {
+  product: Product;
+};
 
 export default function product_details({product}: Props) {
   console.log(product)

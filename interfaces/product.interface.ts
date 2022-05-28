@@ -4,5 +4,6 @@ export interface Product {
         name: string;
         image_urls: string[];
         slug: string;
+        price: string;
     };
 }

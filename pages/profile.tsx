@@ -13,7 +13,7 @@ export default function profile({}: Props) {
         if(!user){
             router.push("/login");
         }
-    },[])
+    },[router])
 
     if (!user) {
         return <></>;

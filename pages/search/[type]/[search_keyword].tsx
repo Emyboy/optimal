@@ -113,6 +113,7 @@ export default function SearchResults({}: Props) {
                 </div>
                 <div className="grid-products grid--view-items shop-grid-5 prd-grid">
                   <div className="row">
+                    {/* <EachProduct size="4" />
                     <EachProduct size="4" />
                     <EachProduct size="4" />
                     <EachProduct size="4" />
@@ -127,8 +128,7 @@ export default function SearchResults({}: Props) {
                     <EachProduct size="4" />
                     <EachProduct size="4" />
                     <EachProduct size="4" />
-                    <EachProduct size="4" />
-                    <EachProduct size="4" />
+                    <EachProduct size="4" /> */}
                   </div>
                 </div>
               </div>
