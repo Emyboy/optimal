@@ -1,5 +1,5 @@
 import { AuthState } from "./auth.interface";
 
 export interface ReduxStore {
-    auth: AuthState
+    auth: AuthState;
 }

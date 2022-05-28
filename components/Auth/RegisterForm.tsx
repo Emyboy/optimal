@@ -2,8 +2,6 @@ import { User } from "interfaces/auth.interface";
 import React, { FormEvent, useEffect, useState } from "react";
 import _Button from "@components/Button";
 import AuthService from "service/auth.service";
-import { setAuthState } from "@redux/actions/auth.action";
-import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 
@@ -11,7 +9,7 @@ type Props = {
     done: (e: User) => void;
 };
 
-export default function RegisterForm({}: Props) {
+export default function RegisterForm({ done }: Props) {
     const defaultErrorTypes = {
         email: "",
         user: "",
@@ -27,7 +25,6 @@ export default function RegisterForm({}: Props) {
 
     const [errorType, setErrorType] = useState(defaultErrorTypes);
 
-    const dispatch = useDispatch();
 
     const validated = () => {
         if (!first_name) {
@@ -68,15 +65,12 @@ export default function RegisterForm({}: Props) {
                 password,
             };
             const res = await AuthService.registerUser(data);
-            dispatch({
-                type: "SET_AUTH_STATE",
-                payload: {
-                    user: res.data?.user,
-                },
-            });
+            done(res.data.user)
             Cookies.set("token", res.data?.jwt);
             toast.success("Welcome to Optimal")
+            setLoading(false);
         } catch (error: any) {
+            setLoading(false);
             if (error?.response?.data?.error?.message) {
                 toast.error(error.response.data.error.message);
             }
@@ -171,7 +165,7 @@ export default function RegisterForm({}: Props) {
                             btnProps={{
                                 type: "submit",
                             }}
-                            // loading={true}
+                            loading={loading}
                         >
                             {"Register"}
                         </_Button>

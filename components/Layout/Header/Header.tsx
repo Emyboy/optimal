@@ -152,7 +152,6 @@ export default function Header() {
                                         <select
                                             id="rgsearch-category"
                                             name="rgsearch[category]"
-                                            data-default="All Categories"
                                         >
                                             <option
                                                 value="00"

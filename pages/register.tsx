@@ -2,11 +2,21 @@ import React from "react";
 import Link from "next/link";
 import RegisterForm from "@components/Auth/RegisterForm";
 import { User } from "interfaces/auth.interface";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { ReduxStore } from "interfaces/redux.interface";
 
 type Props = {};
 
 export default function register({}: Props) {
-  
+    const router = useRouter();
+    const { user } = useSelector((state:ReduxStore) => state.auth)
+    const dispatch = useDispatch();
+
+    if(user){
+        router.push('/')
+        return <></>
+    }
 
     return (
         <div>
@@ -31,7 +41,16 @@ export default function register({}: Props) {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mb-md-0">
                             <div className="inner">
-                                <RegisterForm done={(e) => {}} />
+                                <RegisterForm
+                                    done={(e) => {
+                                        dispatch({
+                                            type: "SET_AUTH_STATE",
+                                            payload: {
+                                                user: e,
+                                            },
+                                        });
+                                    }}
+                                />
                             </div>
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-6">
